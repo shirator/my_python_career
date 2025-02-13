@@ -4,5 +4,7 @@ def invert(dictionary: dict):
     new_s = {}
     for k, v in dictionary.items():
         new_s[v] = k
-    return new_s
+    dictionary.clear()
+    dictionary.update(new_s)
+    return dictionary
 print(invert(s))
